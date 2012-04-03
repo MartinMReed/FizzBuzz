@@ -1,0 +1,16 @@
+for (int i = 1; i <= 100; i++) {
+
+    String[] c = { String.valueOf( i ), "fizzbuzz", "buzz", "fizz" };
+
+    // yes:0 or no:1
+    int f = (int) Math.ceil( ( i % 3 ) / 3.0 );
+    // yes:1 or no:2
+    f += 1;
+
+    // yes:0 or no:1
+    int b = (int) Math.ceil( ( i % 5 ) / 5.0 );
+    // yes:0 or no:2
+    b += b;
+
+    System.out.println( c[( f + b ) % 4] );
+}
